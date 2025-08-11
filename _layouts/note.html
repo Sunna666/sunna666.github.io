@@ -6,54 +6,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <style>
-/* 浅/深色变量（可选） */
-:root{
-  --code-bg: #f6f8fa;
-  --code-bd: #d0d7de;
-  --code-fg: #24292f;
-}
-@media (prefers-color-scheme: dark){
-  :root{
-    --code-bg: #0d1117;
-    --code-bd: #30363d;
-    --code-fg: #c9d1d9;
-  }
-}
-
-/* 统一代码字体（块+行内） */
-.note-body pre,
-.note-body code{
-  font-family: "JetBrains Mono","Fira Code","SFMono-Regular",Consolas,Menlo,monospace;
-  font-size: 0.92rem;
-  color: var(--code-fg);
-}
-
-/* 代码块容器（背景、边框、滚动、圆角） */
-.note-body pre{
-  background: var(--code-bg);
-  border: 1px solid var(--code-bd);
-  border-radius: 6px;
-  padding: .85rem 1rem;
-  line-height: 1.55;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  tab-size: 2;
-}
-
-/* 去掉 Rouge 内层 code 的多余背景/内边距 */
-.note-body pre>code{
-  padding: 0;
-  background: none;
-}
-
-/* 行内代码小胶囊 */
-.note-body p code,
-.note-body li code{
-  background: var(--code-bg);
-  border: 1px solid var(--code-bd);
-  padding: .05rem .3rem;
-  border-radius: 4px;
-}
+    :root{--code-bg:#f6f8fa;--code-bd:#d0d7de;--code-fg:#24292f;}
+    @media(prefers-color-scheme:dark){
+      :root{--code-bg:#0d1117;--code-bd:#30363d;--code-fg:#c9d1d9;}
+    }
+    .note-body pre,
+    .note-body code{
+      font-family:"JetBrains Mono","Fira Code","SFMono-Regular",Consolas,Menlo,monospace;
+      font-size:.92rem;color:var(--code-fg);
+    }
+    .note-body pre{
+      background:var(--code-bg);border:1px solid var(--code-bd);border-radius:6px;
+      padding:.85rem 1rem;line-height:1.55;overflow-x:auto;-webkit-overflow-scrolling:touch;tab-size:2;
+    }
+    .note-body pre>code{padding:0;background:none;}
+    .note-body p code,
+    .note-body li code{
+      background:var(--code-bg);border:1px solid var(--code-bd);
+      padding:.05rem .3rem;border-radius:4px;
+    }
   </style>
 </head>
 
@@ -61,7 +32,7 @@
   {%- include header.html -%}
   <main class="page-content" aria-label="Content">
     <div class="wrapper note-body">
-      {{ content }}   <!-- 不要加任何过滤器 -->
+      {{ content }}
     </div>
     <p><a href="/">⬅ 返回首页</a></p>
   </main>
