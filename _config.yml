@@ -2,7 +2,6 @@ title: "Daily Notes"
 description: "张琳琳团队每月笔记汇总"
 theme: minima
 
-/* 代码块背景 + 边框（覆盖 minima 默认透明背景） */
 .note-body pre {
   background-color: #f6f8fa; /* GitHub 灰背景 */
   border: 1px solid #d0d7de;
@@ -12,14 +11,12 @@ theme: minima
   line-height: 1.5;
 }
 
-/* 代码文字 */
 .note-body pre,
 .note-body code {
   font-family: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, Menlo, monospace;
   font-size: 0.9rem;
 }
 
-/* 如果要代码连字（可选） */
 .note-body code {
   font-variant-ligatures: normal;
 }
